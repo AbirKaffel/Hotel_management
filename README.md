@@ -38,7 +38,8 @@ o	Dispose d'un tableau de bord sécurisé pour gérer les réservations.
 o	Peut ajouter de nouvelles chambres via une page dédiée.
 o	Peut accepter ou rejeter des demandes de réservation.
 ![admindashboard](https://github.com/user-attachments/assets/447b980e-bcdd-4f49-a5ab-504db2e6cd61)
-![addroom](https://github.com/user-attachments/assets/1dea5f76-4faa-4242-a1dc-c1a642c06a20)
+![addroom](https://github.com/user-attachments/assets/18666bda-f3d5-4ed2-ba29-d6e79fc12208)
+
 
 
 Technologies Utilisées
