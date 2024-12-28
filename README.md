@@ -53,4 +53,5 @@ Backend
 Database
 •	MySQL: Base de données pour la gestion des chambres, des utilisateurs et des réservations.
 
-
+Conclusion
+Ce projet a été conçu pour offrir une solution complète et facile à utiliser pour la gestion des hôtels. Merci de votre attention, et n'hésitez pas à explorer le projet sur GitHub.
