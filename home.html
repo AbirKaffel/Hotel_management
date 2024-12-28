@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hotel | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: 'Poppins', Georgia, 'Times New Roman', Times, serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+       
+        .navbar {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: #f39c12 !important;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 1.2rem;
+            margin: 0 0.8rem;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12 !important;
+        }
+
+        
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero .hero-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero .hero-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+            z-index: 1;
+        }
+        .hero .hero-images img.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .hero h1 {
+            z-index: 3;
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            z-index: 3;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .hero .btn {
+            z-index: 3;
+            font-size: 1.2rem;
+            padding: 0.8rem 2rem;
+            background: #f39c12;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background 0.3s ease;
+        }
+        .hero .btn:hover {
+            background: #e67e22;
+        }
+
+        
+        .about-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-section .content {
+            flex: 1;
+            padding: 0 2rem;
+        }
+        .about-section img {
+            flex: 1;
+            border-radius: 10px;
+            max-width: 100%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .about-section h2 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        
+        .rooms {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        }
+        .rooms h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .rooms .room-card {
+            border: none;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .rooms .room-card img {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+        .rooms .room-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .rooms .room-card:hover img {
+            transform: scale(1.1);
+        }
+        .rooms .card-body {
+            text-align: center;
+        }
+
+        
+        .contact-section {
+            padding: 4rem 0;
+            background-color: #333;
+            color: white;
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .contact-section p {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        
+        .footer {
+            background-color: #222;
+            color: #bbb;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .img1 {
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Luxury Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="hero">
+        <div class="hero-images">
+            <img src="assets/images/bg.jpg" class="active" alt="Luxury Hotel Image 1">
+            <img src="assets/images/img.jpeg" alt="Luxury Hotel Image 2">
+            <img src="assets/images/img5.webp" alt="Luxury Hotel Image 3">
+        </div>
+        <h1>Luxury Awaits</h1>
+        <p>Experience elegance like never before</p>
+        <a href="index.php" class="btn">Book Your Stay</a>
+    </div>
+
+    
+    <section id="about" class="about-section container">
+        <img src="assets/images/img1.jpeg" class="img1" alt="Hotel Lobby">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Discover the art of luxury at our prestigious hotel, where elegance meets comfort. From world-class amenities to personalized service, we provide an experience that's truly unforgettable.</p>
+        </div>
+    </section>
+
+    
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <h2>Our Rooms</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img src="assets/images/img6.jpg" alt="Deluxe Room" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <p class="card-text">Enjoy the best view and comfort with our deluxe rooms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img src="assets/images/img2.jpeg" alt="Luxury Suite" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Suite</h5>
+                            <p class="card-text">Indulge in supreme luxury and spacious suites with breathtaking views.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card">
+                        <img src="assets/images/img7.webp" alt="Presidential Suite" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Presidential Suite</h5>
+                            <p class="card-text">The epitome of luxury, offering an unparalleled stay with world-class facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Feel free to get in touch with us for booking, inquiries, or any questions you may have. We're here to help!</p>
+    </section>
+
+    
+    <footer class="footer">
+        <p>&copy; 2024 Luxury Hotel. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let images = document.querySelectorAll('.hero-images img');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>
