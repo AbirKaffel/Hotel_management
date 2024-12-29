@@ -53,5 +53,19 @@ Backend
 Database
 •	MySQL: Base de données pour la gestion des chambres, des utilisateurs et des réservations.
 
+Instructions d'installation
+1.	Configurer l'environnement :
+o	Installez XAMPP 8.2.12 et démarrez Apache et MySQL.
+2.	Cloner le projet :
+o	Placez les fichiers du projet téléchargés depuis GitHub dans le répertoire htdocs de XAMPP.
+3.	Configurer la base de données :
+o	Accédez à http://localhost/phpmyadmin.
+o	Créez une nouvelle base de données.
+o	Importez le fichier hotel_management.sql dans cette base.
+Lancer l'application :
+Dans un navigateur, accédez à :
+http://localhost/hotel_management
+
+
 En conclusion
 Ce projet a été conçu pour offrir une solution complète et facile à utiliser pour la gestion des hôtels. Merci de votre attention, et n'hésitez pas à explorer le projet sur GitHub.
